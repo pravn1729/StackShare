@@ -15,6 +15,9 @@
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
 	<style>
+	body {
+		font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans !important;
+	}
 	#trending-sub-header {
 		font-size: 13px;
 		font-weight: 200;
@@ -32,22 +35,72 @@
 		height:50px;
 	}
 	.stack_logo{
-		width:70px;
-		height:70px;
-		background-color:#ffffff;
+		width:80px;
+		height:80px;
+		background-color:#FFFFFF;
 		border-radius:30px;
 		margin-bottom:6px;
+		padding:5px;
 	}
 	.card-title{
 		font-weight:bold;
 	}
-	.stack_category{
-		font-size:12px;
+    .stack-header{
+		font-size:18px;
+		font-weight:600;
+	}
+	.stack_sub_category{
+		font-size:13px;
 		font-weight:600;
 		margin-bottom:6px;
+		height: 20px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: #FFFFFF;
 	}
+	
+	.stack_category{
+		color: #969696;
+		font-size: 13px;
+		color: #aaa;
+		font-weight: 600;
+		background-color: #3D3D3D;
+		padding: 0px;
+		border-radius: 3px;
+		padding: 0px;
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-bottom:20px;
+	}
+	
 	#stack_description{
 		font-size:14px;
+	}
+	.tabDescription{
+	font-weight:500;
+    font-size: 18px;
+	}
+	.nav-pills>li.active>a,
+	.nav-pills>li.active>a:hover,
+	.nav-pills>li.active>a:focus {
+    background-color: #0690fa;
+    border-bottom: 5px solid #0060FA;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    height: 50px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    transition: all .15s ease-in-out;
+    color: white !important;
+    padding: 9px 0 8px 0;
+	
+}
 	</style>
 </head>
 
@@ -150,127 +203,359 @@
 					</div>
 				</div>
 				<div class="row">
-				    <div class="col-md-12 text-center">
-						<div class="text-center">
-							Stack | Details
-						</div>
+				    <div class="col-3"></div>
+				    <div class="col-6 text-center">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs nav-justified nav-pills" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active text-right" data-toggle="tab" href="#panel1" role="tab"><span class="tabDescription">Stack</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-left" data-toggle="tab" href="#panel2" role="tab"><span class="tabDescription">Details</span></a>
+								</li>
+							</ul>
 					</div>
+					<div class="col-3"></div>
 				</div>
 			</div>
 			<div class="container-fluid grey lighten-4">
-				<div class="container">
-					<div class="row">
-						<div class="col mt-3 mb-3">
+			    <!-- Tab panels -->
+				<div class="tab-content">
+					<!--Panel 1-->
+					<div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+						<div class="container">
+							<div class="row">
+								<div class="col mt-3 mb-3">
+													
+									<!--Card-->
+									<div class="card">
+
+										<!--Card image-->
+										<div class="card-body text-center">
+											<!--Title-->
+											<div class="card-title stack-header">Application and Data</div>
+										</div>
+										<!--Card content-->
+										<div class="card-body grey darken-4 text-center">
 											
-							<!--Card-->
-							<div class="card">
-
-								<!--Card image-->
-								<div class="card-body text-center">
-									<!--Title-->
-									<h5 class="card-title">Application and Data</h5>
-								</div>
-								<!--Card content-->
-								<div class="card-body grey text-center">
-									
-									<div class="row">
-										<div class="col">
 											<div class="row">
 												<div class="col">
-													<img class="stack_logo" src="https://img.stackshare.io/service/18/amazon-ec2.png"/>
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/18/amazon-ec2.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/25/amazon-s3.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/310/DtR5ZTQA.jpeg"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/993/pUBY5pVj.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
 												</div>
 											</div>
+											
+											<!-- -->
+											
 											<div class="row">
 												<div class="col">
-													<span class="stack_category">Application and Data</span>
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/18/amazon-ec2.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/25/amazon-s3.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/310/DtR5ZTQA.jpeg"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/993/pUBY5pVj.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
 												</div>
 											</div>
+											
+											<!-- -->
+											
+											<div class="row">
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/18/amazon-ec2.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/25/amazon-s3.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/310/DtR5ZTQA.jpeg"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/993/pUBY5pVj.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											
+											<!-- -->
+											<div class="row">
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/18/amazon-ec2.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/25/amazon-s3.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/310/DtR5ZTQA.jpeg"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="row">
+														<div class="col">
+															<img class="rounded stack_logo" src="https://img.stackshare.io/service/993/pUBY5pVj.png"/>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_sub_category">nginx</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="stack_category">Web Servers</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- -->
 										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/25/amazon-s3.png"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/310/DtR5ZTQA.jpeg"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/993/pUBY5pVj.png"/>
-										</div>
+
 									</div>
-									<div class="row">
-										<div class="col-md-12">
-											<span class="stack_category">Utilities</span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/11/Lt2d5cuR.jpeg"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/13/amazon-cloudfront.png"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/38/amazon-route-53.png"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/728/oPSWabPw.png"/>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="stack_category">DevOps</span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/106/74c50c2938accf866de4cf41fefd3b9c.png"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/249/3eb8eff2a36fd5308a8f716598438783.png"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/586/fbbb494a7eef5f9278c6967b6072ca3e.png"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/1073/mPwTb3BF.png"/>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="stack_category">Business Tools</span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/70/HvLsCDB2.png"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/108/asana.png"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/154/p7KWyLwu.png"/>
-										</div>
-										<div class="col">
-											<img class="stack_logo" src="https://img.stackshare.io/service/157/bwJjpeht.png"/>
-										</div>
-									</div>
+								<!--/.Card-->
+					   
 								</div>
 
+						
 							</div>
-						<!--/.Card-->
-			   
 						</div>
-
+							
+						<div class="row">
+							<a href="#" class="btn btn-primary mt-4 mb-4" style="margin:4px auto;">Load More</a>
+						</div>
 				
 					</div>
-				</div>
-					
-				<div class="row">
-					<a href="#" class="btn btn-primary mt-4 mb-4" style="margin:4px auto;">Load More</a>
-				</div>
+					<div class="tab-pane fade" id="panel2" role="tabpanel">
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.</p>
+					</div>
+					<!--/.Panel 2-->
+			    </div>
+				
 			</div>
 		</main>
 	<!-- Main Layout -->
-	
+                            
 
 		<!--Footer-->
 		<footer class="page-footer center-on-small-only unique-color-dark pt-0" style="margin-top:0px;">
