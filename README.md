@@ -5,4 +5,4 @@ Follow below steps
 1) Download mdb from below link
 https://mdbootstrap.com/getting-started/
 
-2)stackshare.html and stackshare_detail.html.
+2) put stackshare.html and stackshare_detail.html beside index.html
