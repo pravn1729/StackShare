@@ -1,0 +1,55 @@
+pragma solidity ^0.4.0;
+contract MapTest {
+
+//uint universityMapSequenceId = 100;
+
+struct Institute{
+   uint index;
+   uint[] institues;
+   bytes32 univName;
+   mapping (address => uint) instituteMap;
+  
+}
+mapping ( address => Institute) public universityMap;
+address[]  public universityMapArr;
+
+mapping(address => uint) universityList;
+address[] public universityListArr;
+
+
+
+// University,Institute,Student
+// Remove createUniversity in contract and generate ethereum address for them
+// univAddress
+function createUniversity(address univAddress, bytes32 _univName) public{ // (address univAddress, bytes _univName)
+    // create Ethereum account and register with addUniversity
+    // SequenceId or UniqueTicker or EthereumAccountAddress
+    var univ = universityMap[univAddress];
+    // send event addUniversity(universitySequenceId);
+    univ.index = universityMapArr.length;
+    univ.univName = _univName;
+    universityMapArr.push(univAddress);
+    universityList[univAddress] = 1000;
+    universityListArr.push(univAddress);
+}
+function createInstitute(address parentUniv, address ) public{ //(address parentUniv, address instituteAddr, bytes32 _instName)
+    // create Ethereum account and register with addInstitute
+   // universityMap[]
+    
+}
+function createStudent() public{
+    // create Ethereum account and register with addStudent
+}
+    
+function isUniExist(address universityAddr) public constant returns(bool){
+    if(universityListArr.length == 0) return false;
+    return (universityMapArr[universityMap[universityAddr].index] == universityAddr);
+}
+
+function getUniversity() public constant returns (uint){
+    return universityListArr.length;
+}
+
+//function getUniversityt()
+
+}
