@@ -2,12 +2,40 @@ pragma solidity ^0.4.0;
 contract MapTest {
 
 //uint universityMapSequenceId = 100;
+struct CertificateContent{
+    bytes32 certIdentifier;
+    bool revoke;
+    bool expired;
+}
+struct Certificate{
+    uint index;
+    CertificateContent[] certificates;
+    bytes32 studentIdentifier;
+}
+struct Student{
+    uint index;
+    address[] students;
+    bytes32 batchIdentifier;
+    mapping (address=>uint) studentMap;
+}
+struct Batch{
+    uint index;
+    address[] batches;
+    bytes32 courseIdentifier;
+    mapping (address => Student) batchMap;
+}
+struct Course{
+    uint index;
+    address[] courses;
+    bytes32 instituteIdentifier;
+    mapping (address => Batch) courseMap;
+}
 
 struct Institute{
    uint index;
-   uint[] institues;
+   address[] institutes;
    bytes32 univName;
-   mapping (address => uint) instituteMap;
+   mapping (address => Course) instituteMap;
   
 }
 mapping ( address => Institute) public universityMap;
@@ -32,10 +60,14 @@ function createUniversity(address univAddress, bytes32 _univName) public{ // (ad
     universityList[univAddress] = 1000;
     universityListArr.push(univAddress);
 }
-function createInstitute(address parentUniv, address ) public{ //(address parentUniv, address instituteAddr, bytes32 _instName)
+function createInstitute(address parentUniv, address instituteAddr, bytes32 _instName) public{ //(address parentUniv, address instituteAddr, bytes32 _instName)
     // create Ethereum account and register with addInstitute
-   // universityMap[]
-    
+   var univ = universityMap[parentUniv];
+   univ.institutes.push(instituteAddr);
+   // check if institute exists before
+   var inst = univ.instituteMap[instituteAddr];
+   inst.index = univ.institutes.length;
+   inst.instituteIdentifier = _instName;
 }
 function createStudent() public{
     // create Ethereum account and register with addStudent
